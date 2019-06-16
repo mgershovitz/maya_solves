@@ -21,7 +21,8 @@ class MatrixSums(object):
         return self.sum(pos_a, pos_a)
 
     def set(self,pos,val):
-        diff = val - self.get_cell_value(pos)
+        original_set_value = self.get(pos)
+        diff = val - original_set_value
         for i in range(pos.i,self.rows):
             for j in range(pos.j,self.columns):
                 self.sums_matrix[i][j] += diff
@@ -67,12 +68,24 @@ def run_tests():
     assert t.get(MatrixPosistion(1, 2)) == 1
     assert t.sum(MatrixPosistion(1, 1), MatrixPosistion(1, 2)) == 1
 
+    # [[1,0,3]
+    #   [2,0,1]]
+    t.set(MatrixPosistion(0, 1), 0)
+    assert t.get(MatrixPosistion(0, 1)) == 0
+    assert t.get(MatrixPosistion(0, 2)) == 3
+    assert t.sum(MatrixPosistion(0, 0), MatrixPosistion(0, 2)) == 4
+    assert t.sum(MatrixPosistion(0, 0), MatrixPosistion(1, 2)) == 7
+    assert t.get(MatrixPosistion(1, 2)) == 1
+    assert t.sum(MatrixPosistion(1, 1), MatrixPosistion(1, 2)) == 1
+
     # [[5,2,3]
     #   [2,0,1]]
+    t.set(MatrixPosistion(0, 1), 2)
     t.set(MatrixPosistion(0, 0), 5)
     assert t.get(MatrixPosistion(0, 0)) == 5
     assert t.get(MatrixPosistion(0, 2)) == 3
     assert t.sum(MatrixPosistion(0, 0), MatrixPosistion(0, 2)) == 10
+    assert t.sum(MatrixPosistion(0, 0), MatrixPosistion(1, 2)) == 13
     assert t.get(MatrixPosistion(1, 2)) == 1
     assert t.sum(MatrixPosistion(1, 1), MatrixPosistion(1, 2)) == 1
 
