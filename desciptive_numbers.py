@@ -20,7 +20,7 @@ def get_nth_descriptive(n):
         i = 1
         current_number = 1
         while i < n:
-            current_number = get_number_decription(str(current_number))
+            current_number = get_number_description(str(current_number))
             i += 1
 
         return current_number
