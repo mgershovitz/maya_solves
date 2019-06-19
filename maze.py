@@ -21,6 +21,7 @@ class MazeCell(object):
 class Maze(object):
     def __init__(self, maze_matrix):
         self.maze = maze_matrix
+        self.cells_cache = {}
         self.rows = len(maze_matrix)
         self.columns = len(maze_matrix[0])
 
@@ -40,9 +41,9 @@ class Maze(object):
         return -1
 
     def get_cell(self, i, j):
-        if not isinstance(self.maze[i][j], MazeCell):
-            self.maze[i][j] = MazeCell(i, j, self.maze[i][j] == 1, self.maze[i][j] == "EXIT")
-        return self.maze[i][j]
+        if (i,j) not in self.cells_cache:
+            self.cells_cache[(i,j)] = MazeCell(i, j, self.maze[i][j] == 1, self.maze[i][j] == "EXIT")
+        return self.cells_cache[(i,j)]
 
     def get_available_adjacent_cell(self, cell):
         for (i, j) in [(cell.i - 1, cell.j), (cell.i, cell.j - 1), (cell.i + 1, cell.j), (cell.i, cell.j + 1)]:
