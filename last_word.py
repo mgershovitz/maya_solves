@@ -1,11 +1,9 @@
 def find_last_word(s):
-    if len(s) == 0:
-        return ""
     last_word = ""
     i = len(s) - 1
-    while s[i] == " " and i >= 0:
+    while i >= 0 and s[i] == " ":
         i -= 1
-    while s[i] != " " and i >= 0:
+    while i >= 0 and s[i] != " ":
         last_word = s[i] + last_word
         i -= 1
     return last_word
