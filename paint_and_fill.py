@@ -41,14 +41,14 @@ class Screen(object):
             print(row)
 
     def paint_and_fill_recur(self, pos, new_color, old_color):
-        if self.get_color(pos) == old_color:
-            self.set_color(pos, new_color)
-            next_neighbour = self.get_neighbour(pos, old_color)
-            if next_neighbour:
-                self.paint_and_fill_recur(next_neighbour, new_color, old_color)
+        self.set_color(pos, new_color)
+        next_neighbour = self.get_neighbour(pos, old_color)
+        if next_neighbour:
+            self.paint_and_fill_recur(next_neighbour, new_color, old_color)
 
     def paint_and_fill(self, pos, new_color):
-        self.paint_and_fill_recur(pos, new_color, self.get_color(pos))
+        if self.get_color(pos) != new_color:
+            self.paint_and_fill_recur(pos, new_color, self.get_color(pos))
 
 class Colors(object):
     W = 'white'
