@@ -43,8 +43,9 @@ class Screen(object):
     def paint_and_fill_recur(self, pos, new_color, old_color):
         self.set_color(pos, new_color)
         next_neighbour = self.get_neighbour(pos, old_color)
-        if next_neighbour:
+        while next_neighbour:
             self.paint_and_fill_recur(next_neighbour, new_color, old_color)
+            next_neighbour = self.get_neighbour(pos, old_color)
 
     def paint_and_fill(self, pos, new_color):
         if self.get_color(pos) != new_color:
@@ -92,6 +93,12 @@ def run_tests():
     print("Paint and fill from (1,1) in white:")
     A.print()
 
+    A = Screen([[Colors.W, Colors.W, Colors.W], [Colors.W, Colors.W, Colors.W], [Colors.B, Colors.W, Colors.B]])
+    print("Before:")
+    A.print()
+    A.paint_and_fill(Position(0, 0), Colors.G)
+    print("Paint and fill from (0,0) in Green:")
+    A.print()
 
 if __name__ == '__main__':
     run_tests()
