@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/18/maze-path/
+
 class MazeCell(object):
     def __init__(self, i, j, is_wall=False, is_exit=False):
         self.i = i

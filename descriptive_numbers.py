@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/18/descriptive-numbers/
+
 def get_number_description(num):
     res = ""
     current_count = 1

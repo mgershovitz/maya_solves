@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/17/find-median-of-three/
+
 def is_median(x,y,z):
 	# Returns True if x is the median of the group x,y,z
 	if x <= y and x >= z or x>=y and x<=z:

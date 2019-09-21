@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/18/last-word/
+
 def find_last_word(s):
     last_word = ""
     i = len(s) - 1
