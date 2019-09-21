@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/25/copy-bits/
+
 def copy_bits(N, M, i, j):
     x = -1 << i
     y = (1 << j+1) - 1
