@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/19/approximate-sort/
+
 from heapq import heappop, heappush
 
 def sort_approximate(arr, k):
