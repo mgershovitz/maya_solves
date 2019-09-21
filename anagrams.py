@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/07/17/anagrams/
+
 import string
 from collections import defaultdict
 
