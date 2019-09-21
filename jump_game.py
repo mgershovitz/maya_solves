@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/23/jump-game/
+
 class JumpGame(object):
     def __init__(self):
         self.jumps = {}
