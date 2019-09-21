@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/24/paint-and-fill/
+
 from termcolor import colored
 
 class Position(object):
