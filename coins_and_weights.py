@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/07/09/coins-and-weights/
+
 class Scale(object):
     def __init__(self):
         self.weigh_count = 0
