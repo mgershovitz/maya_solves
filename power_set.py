@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/20/power-set/
+
 def get_padded_bin(num, padded_length):
     format_str = '0%db' % padded_length
     return format(num, format_str)
