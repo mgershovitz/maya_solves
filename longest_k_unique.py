@@ -1,6 +1,7 @@
+# Related blog post - https://mayareads.blog/2019/07/04/k-unique-sequence/
+
 import copy
 from collections import defaultdict
-
 
 def find_longest_k_unique(arr, k):
     longest_k_uniuqe = []
