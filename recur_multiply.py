@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/06/20/recur-multiply/
+
 class Multiplier(object):
     def __init__(self):
         self.results_cache = {}
