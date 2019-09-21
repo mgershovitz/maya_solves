@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/07/06/merge-meetings/
+
 class Meeting(object):
     def __init__(self, start, end):
         self.start_time = start
