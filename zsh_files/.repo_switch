@@ -1,0 +1,10 @@
+function repo {
+    source ~/virtual_envs/$1/bin/activate;
+    cd ~/git_repositories/$1
+}
+
+function _repo {
+	_arguments "1: :($(ls ~/git_repositories))"
+}
+
+compdef _repo repo
