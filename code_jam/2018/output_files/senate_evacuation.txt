@@ -2,3 +2,5 @@ Case #1: AB AB
 Case #2: A A B C A BC
 Case #3: C A BC
 Case #4: B A B A BC
+Case #5: AB
+Case #6: F F F F A B C D EF
