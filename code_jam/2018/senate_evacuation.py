@@ -1,3 +1,5 @@
+# Related blog post - https://mayareads.blog/2019/11/23/senate-evacuation/
+
 import string
 
 def remove_senators(senators_counter, senators_to_evict):
