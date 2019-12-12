@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if git diff --cached | grep '^[+d].*NO_COMMIT'; then
+    echo "Can't commit file with NO_COMMIT comment, remove the debug code and try again"
+    exit 1
+fi

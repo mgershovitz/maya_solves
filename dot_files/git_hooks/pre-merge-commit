@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the current branch name
+branch_name=$(git branch | grep "*" | sed "s/\* //")
+
+# if the merged branch was master - don't do anything
+if [[ $branch_name = "master" ]]; then
+	echo "Preparing to merge to master..."
+	if git diff --cached | grep '^[+d].*NO_MERGE'; then
+		echo "Can't merge branch with 'NO_MERGE' comment, fix what you need and try again!"
+		exit 1
+	fi
+fi
