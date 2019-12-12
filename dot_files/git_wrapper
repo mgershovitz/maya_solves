@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function git {
+        if [[ "$1" = "merge" && "$@" != *"--help"* && "$@" != *"--abort"* ]]; then
+                git_merge_wrapper "$@";
+        else
+                command git "$@"
+        fi
+}
+
+function git_merge_wrapper {
+        command git "$@"
+        ret_code=$?
+        if [[ "$ret_code" != 0 ]]; then
+                command git merge --abort
+        fi
+}
