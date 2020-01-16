@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/19/approximate-sort/
+# Related blog post - https://algoritmim.co.il/2019/06/19/approximate-sort/
 
 from heapq import heappop, heappush
 

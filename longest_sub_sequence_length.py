@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/08/04/longest-subsequence-length/
+# Related blog post - https://algoritmim.co.il/2019/08/04/longest-subsequence-length/
 
 def longest_subsequence_length(arr):
     longest_length = 0

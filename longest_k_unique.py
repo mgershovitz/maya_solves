@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/07/04/k-unique-sequence/
+# Related blog post - https://algoritmim.co.il/2019/07/04/k-unique-sequence/
 
 import copy
 from collections import defaultdict

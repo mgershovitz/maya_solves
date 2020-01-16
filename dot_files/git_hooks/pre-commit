@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Related blog post (in Hebrew) - https://mayareads.blog/2019/12/18/git-me-baby-one-more-time
+# Related blog post (in Hebrew) - https://algoritmim.co.il/2019/12/18/git-me-baby-one-more-time
 
 if git diff --cached | grep '^[+d].*NO_COMMIT'; then
     echo "Can't commit file with NO_COMMIT comment, remove the debug code and try again"

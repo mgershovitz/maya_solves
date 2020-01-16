@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/24/paint-and-fill/
+# Related blog post - https://algoritmim.co.il/2019/06/24/paint-and-fill/
 
 from termcolor import colored
 

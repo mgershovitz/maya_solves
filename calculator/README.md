@@ -13,5 +13,5 @@ of implied multiplication -
 
 Related blog posts - 
 
-Calculator part A - https://mayareads.blog/2019/08/24/cala-part-a/
-Calculator part B - https://mayareads.blog/2019/08/24/cala-part-b/
+Calculator part A - https://algoritmim.co.il/2019/08/24/cala-part-a/
+Calculator part B - https://algoritmim.co.il/2019/08/24/cala-part-b/

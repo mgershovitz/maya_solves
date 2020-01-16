@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/20/power-set/
+# Related blog post - https://algoritmim.co.il/2019/06/20/power-set/
 
 def get_padded_bin(num, padded_length):
     format_str = '0%db' % padded_length

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Related blog post (in Hebrew) - https://mayareads.blog/2019/12/18/git-me-baby-one-more-time
+# Related blog post (in Hebrew) - https://algoritmim.co.il/2019/12/18/git-me-baby-one-more-time
 
 # Get the current branch name
 branch_name=$(git branch | grep "*" | sed "s/\* //")

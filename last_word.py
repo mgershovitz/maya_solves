@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/18/last-word/
+# Related blog post - https://algoritmim.co.il/2019/06/18/last-word/
 
 def find_last_word(s):
     last_word = ""

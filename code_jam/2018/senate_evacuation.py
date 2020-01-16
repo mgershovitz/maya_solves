@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/11/23/senate-evacuation/
+# Related blog post - https://algoritmim.co.il/2019/11/23/senate-evacuation/
 
 import string
 

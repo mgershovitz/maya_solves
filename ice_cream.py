@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/07/18/ice-cream/
+# Related blog post - https://algoritmim.co.il/2019/07/18/ice-cream/
 
 class IceCreamChooser(object):
     def __init__(self, ice_cream_costs):

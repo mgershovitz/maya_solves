@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/07/22/check-sudoku-better/
+# Related blog post - https://algoritmim.co.il/2019/07/22/check-sudoku-better/
 
 from math import sqrt
 

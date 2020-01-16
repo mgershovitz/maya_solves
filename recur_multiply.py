@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/20/recur-multiply/
+# Related blog post - https://algoritmim.co.il/2019/06/20/recur-multiply/
 
 class Multiplier(object):
     def __init__(self):

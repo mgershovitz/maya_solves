@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/18/descriptive-numbers/
+# Related blog post - https://algoritmim.co.il/2019/06/18/descriptive-numbers/
 
 def get_number_description(num):
     res = ""

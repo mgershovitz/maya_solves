@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/17/find-median-of-three/
+# Related blog post - https://algoritmim.co.il/2019/06/17/find-median-of-three/
 
 def is_median(x,y,z):
 	# Returns True if x is the median of the group x,y,z

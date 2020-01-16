@@ -1,4 +1,4 @@
-# Related blog post - https://mayareads.blog/2019/06/25/copy-bits/
+# Related blog post - https://algoritmim.co.il/2019/06/25/copy-bits/
 
 def copy_bits(N, M, i, j):
     x = -1 << i
