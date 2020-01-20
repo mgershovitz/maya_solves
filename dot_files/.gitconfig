@@ -1,0 +1,29 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+        name = Maya Gershovitz Bar
+        email = <Mail>
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        up = pull --rebase
+        sq = "!f() { git rebase -i HEAD~$1; }; f"
+        fix = "!f() { git add .; git commit -m "[fixup]"; }; f"
+        open = "!f() { url="$(git config --get remote.origin.url | tr : /)"; full_url="$(echo "${url/git@/http://}")"; open $full_url; }; f"
+[core]
+        excludesfile = /Users/<user_dir>/.gitignore_global
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]
+        cmd = /private/var/folders/hd/fy5g813j4lbg75nf0s_ptzch0000gn/T/AppTranslocation/3F605A41-FCAC-4A75-8E07-DEE3A566EEC8/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[filter "lfs"]
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
+        clean = git-lfs clean -- %f
+[init]
+        templatedir = /Users/<user_dir>/.git_template
