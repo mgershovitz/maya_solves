@@ -17,6 +17,7 @@ def run_tests():
     assert nextBigger(513) == 531
     assert nextBigger(111) == -1
     assert nextBigger(1144) == 1414
+    assert nextBigger(1662) == 2166
 
 
 if __name__ == '__main__':
