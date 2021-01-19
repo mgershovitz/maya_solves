@@ -10,11 +10,18 @@
         st = status
         up = pull --rebase
         sq = "!f() { git rebase -i HEAD~$1; }; f"
+        cm = "!f() { git add .; git commit -m $1; }; f"
         fix = "!f() { git add .; git commit -m "[fixup]"; }; f"
         fixit = "!f() { git add .; git commit --amend; }; f"
         open = "!f() { url="$(git config --get remote.origin.url | tr : /)"; full_url="$(echo "${url/git@/http://}")"; open $full_url; }; f"
         discard = reset --hard
-        cbr = "!gitCurrentBranchName() { branchName="$(git name-rev $1)"; echo ${branchName#"${1} "}; }; gitCurrentBranchName"
+        cbr = rev-parse --abbrev-ref HEAD
+        delete-remote = !sh -c \"git push origin --delete $(git cbr)\"
+        branches = "!f() { allBranches="$(git branch --sort=-committerdate -vv --format='%(refname:short)')"; branchesList=($allBranches); for i in {0..2}; do echo $i ${branchesList[i]}; done }; f"
+        pt = !sh -c \"git push --force-with-lease origin HEAD:refs/heads/$(git lcbr)  \"
+        pb = !sh -c \"git push --force-with-lease origin HEAD:refs/heads/$1  \"
+        lc = rev-parse --short HEAD
+        lcbr = "!f() { lastCommit="$(git lc)"; git cbr $lastCommit; }; f"
 [core]
         excludesfile = /Users/mayagershovitzbar/.gitignore_global
 [filter "lfs"]
