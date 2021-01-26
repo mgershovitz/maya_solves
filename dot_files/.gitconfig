@@ -17,7 +17,10 @@
         discard = reset --hard
         cbr = rev-parse --abbrev-ref HEAD
         delete-remote = !sh -c \"git push origin --delete $(git cbr)\"
-        branches = "!f() { allBranches="$(git branch --sort=-committerdate -vv --format='%(refname:short)')"; branchesList=($allBranches); for i in {0..2}; do echo $i ${branchesList[i]}; done }; f"
+        branches-by-order = branch --sort=-committerdate -vv --format='%(refname:short)'
+        branches = "!f() { allBranches="$(git branches-by-order)"; branchesList=($allBranches); for i in {0..2}; do echo ${branchesList[i]}; done }; f"
+        cob = !sh -c \"git checkout $(git branches | fzf )\"
+        colb = checkout @{-1}
         pt = !sh -c \"git push --force-with-lease origin HEAD:refs/heads/$(git lcbr)  \"
         pb = !sh -c \"git push --force-with-lease origin HEAD:refs/heads/$1  \"
         lc = rev-parse --short HEAD
