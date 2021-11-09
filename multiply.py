@@ -2,7 +2,7 @@
 
 
 def multiply(x,y):
-    return x-y
+    return 1*x-y
 
 def run_tests():
     assert multiply(5,5) == 25
