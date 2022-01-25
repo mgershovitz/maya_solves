@@ -1,19 +1,6 @@
 from consts import *
 
 
-def check_player_guess(code, code_set, guess):
-    bul = 0
-    pgia = 0
-    for i in range(0, len(guess)):
-        color = guess[i]
-        if color == code[i]:
-            bul += 1
-        elif color in code_set:
-            pgia += 1
-
-    return bul, pgia
-
-
 def validate_player_guess(player_guess):
     valid_input = True
     if len(player_guess) != CODE_LENGTH:
@@ -44,7 +31,7 @@ def get_player_guess():
     valid_input = validate_player_guess(guess)
 
     while not valid_input:
-        guess = format_player_guess(input(USER_INPUT_PROMPT).split(" "))
+        guess = format_player_guess(input(USER_INPUT_PROMPT))
         valid_input = validate_player_guess(guess)
 
     return guess
