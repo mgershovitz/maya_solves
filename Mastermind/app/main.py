@@ -1,8 +1,8 @@
 import random
 
 from consts import *
-from game_logic.player import get_player_guess
-from game_logic.checkers import check_player_guess_with_duplicates
+from app.game_logic.player import get_player_guess
+from app.game_logic.checkers import check_player_guess_with_duplicates
 
 
 def generate_code():

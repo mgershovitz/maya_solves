@@ -1,4 +1,4 @@
-from consts import *
+from app.consts import *
 
 
 def validate_player_guess(player_guess):
