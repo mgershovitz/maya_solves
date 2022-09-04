@@ -1,6 +1,6 @@
-from random import choice
+# Related blog post - https://algoritmim.co.il/just-code/connect-four-game-in-python/
 
-from four_in_a_row.board import Color, ROWS, COLUMNS, Board
+from four_in_a_row.board import Color
 
 from four_in_a_row.board import BoardUtils
 

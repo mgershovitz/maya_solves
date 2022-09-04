@@ -1,3 +1,5 @@
+# Related blog post - https://algoritmim.co.il/just-code/connect-four-game-in-python/
+
 from four_in_a_row.board import Board, Color
 from four_in_a_row.logic import add_disc, is_win
 

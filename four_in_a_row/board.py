@@ -1,3 +1,5 @@
+# Related blog post - https://algoritmim.co.il/just-code/connect-four-game-in-python/
+
 from enum import Enum
 
 ROWS = 6
