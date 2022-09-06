@@ -11,8 +11,8 @@ def four_sequence_exists(discs_vector):
     for i in range(1, len(discs_vector)):
         if discs_vector[i] == discs_vector[i - 1] and not (discs_vector[i] is Color.EMPTY.value):
             current_seq += 1
-        if current_seq > longest_seq:
-            longest_seq = current_seq
+            if current_seq > longest_seq:
+                longest_seq = current_seq
         else:
             current_seq = 1
     return longest_seq == 4

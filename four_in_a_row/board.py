@@ -37,11 +37,11 @@ class BoardUtils:
 
     @staticmethod
     def get_positive_diagonal_vector(board, row, column):
-        start_row = max(0, row - 3)
-        start_column = max(0, column - 3)
+        start_row = row - 3
+        start_column = column - 3
 
-        end_row = min(board.rows-1, row + 3)
-        end_column = min(board.columns-1, column + 3)
+        end_row = row + 3
+        end_column = column + 3
         vector = []
 
         r = start_row
@@ -54,11 +54,11 @@ class BoardUtils:
 
     @staticmethod
     def get_negative_diagonal_vector(board, row, column):
-        start_row = min(board.rows-1, row + 3)
-        start_column = max(0, column - 3)
+        start_row = row + 3
+        start_column = column - 3
 
-        end_row = max(0, row - 3)
-        end_column = min(board.columns-1, column + 3)
+        end_row = row - 3
+        end_column = column + 3
         vector = []
 
         r = start_row
@@ -97,7 +97,7 @@ class Board:
         return Board(rows, columns, board_state)
 
     def get(self, r, c):
-        return self.state[r][c]
+        return self.state[r][c] if r >=0 and r < self.rows and c >= 0 and c < self.columns else Color.EMPTY
 
     def set(self, r, c, val):
         self.state[r][c] = val
