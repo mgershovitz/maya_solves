@@ -43,6 +43,15 @@ def test_winning_boards():
         },
         {
             'board_state':
+                [[0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0],
+                 [0, 0, 0, 0, 0, 0, 0],
+                 [1, 1, 0, 1, 1, 1, 1]],
+            'pos_r': 0,
+            'pos_c': 3
+        },
+        {
+            'board_state':
                 [[0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0],
                  [0, 0, 0, 0, 0],
@@ -88,7 +97,7 @@ def test_winning_boards():
         }
     ]
     for entry in winning_boards_data:
-        board = Board.read(4, 5, entry['board_state'])
+        board = Board.read(entry['board_state'])
         assert (is_win(board, entry['pos_r'], entry['pos_c']) is True)
 
 
@@ -150,7 +159,7 @@ def test_no_win_boards():
         }
     ]
     for entry in winning_boards_data:
-        board = Board.read(4, 5, entry['board_state'])
+        board = Board.read(entry['board_state'])
         assert (is_win(board, entry['pos_r'], entry['pos_c']) is False)
 
 

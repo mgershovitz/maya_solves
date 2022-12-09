@@ -90,7 +90,9 @@ class Board:
         self.state = [[Color.EMPTY for _ in range(0, self.columns)] for _ in range(0, self.rows)]
 
     @classmethod
-    def read(cls, rows, columns, input_board):
+    def read(cls, input_board):
+        rows = len(input_board)
+        columns = len(input_board[0])
         board_state = []
         for r in range(rows - 1, -1, -1):
             board_state.append(input_board[r])
